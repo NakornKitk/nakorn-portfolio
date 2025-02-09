@@ -42,8 +42,8 @@ export default function ContactForm() {
     };
 
     return (
-        <div>
-            <h2>Contact Us</h2>
+        <div className="py-[50px]">
+            <h2 className="text-center text-[32px] font-bold">Contact Us</h2>
             {status && <p>{status}</p>}
             <form onSubmit={handleSubmit}>
                 <div>
