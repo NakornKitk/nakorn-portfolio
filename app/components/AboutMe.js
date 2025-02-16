@@ -5,15 +5,16 @@ function AboutMe() {
         <div className="my-[50px]">
             <h1 className="text-center text-[32px] font-bold">About Me</h1>
 
-            <div className="flex gap-[10%] my-[20px]">
-                <div className="border-2 border-black rounded-lg p-4 text-center">
-                    <p>Experience</p>
+            <div className="flex gap-[20px] my-[20px] w-[100%]">
+                <div className="border border-[#7E99A3] rounded-lg p-4 text-center w-full mb-4 bg-[#FAFAFA] ">
+                    <p className="text-[20px] mb-2 py-4 font-semibold">Experience</p>
                     <p>0+ year Web Development</p>
                     <p>1+ year NPI Engineer</p>
                 </div>
-                <div className="border-2 border-black rounded-lg p-4 text-center">
-                    <p>Education</p>
+                <div className="border border-[#7E99A3] rounded-lg p-4 text-center w-full mb-4 bg-[#FAFAFA]">
+                    <p className="text-[20px] mb-2 py-4 font-semibold">Education</p>
                     <p>B.Sc Bachelors Degree of Industrial Engineering</p>
+                    <p>Kasetsart University</p>
                 </div>
             </div>
 
