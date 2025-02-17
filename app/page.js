@@ -5,6 +5,9 @@ import Skill from "./components/Skill";
 import Projects from "./components/Projects";
 import Image from 'next/image';
 import Experience from "./components/Experience";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaGoogle } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -15,9 +18,14 @@ export default function Home() {
           <div className="rounded-full object-cover mx-[auto] overflow-hidden w-[400px] h-[400px]">
             <Image src="/images/profile.png" alt="profile" width={400} height={400} />
           </div>
-          <div className="py-[40px]">
+          <div className="pt-[40px] pb-[10px]">
             <h1 className="text-[32px] font-bold text-black">Nakorn Kitkanchaoroensin</h1>
             <h2 className="text-[22px]  text-[#4C585B] font-semibold">Web Developer</h2>
+          </div>
+          <div className="flex items-center justify-center gap-x-3">
+            <FaGithub className="text-[36px]" />
+            <FaLinkedin className="text-[36px]" />
+            <FaGoogle className="text-[36px]" />
           </div>
         </div>
         <AboutMe />

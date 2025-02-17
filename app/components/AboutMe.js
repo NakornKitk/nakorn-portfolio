@@ -1,4 +1,6 @@
 import React from 'react'
+import { FaGraduationCap } from "react-icons/fa";
+import { MdBusinessCenter } from "react-icons/md";
 
 function AboutMe() {
     return (
@@ -7,12 +9,18 @@ function AboutMe() {
 
             <div className="flex gap-[20px] my-[20px] w-[100%]">
                 <div className="border border-[#7E99A3] rounded-lg p-4 text-center w-full mb-4 bg-[#FAFAFA] ">
-                    <p className="text-[20px] mb-2 py-4 font-semibold">Experience</p>
+                    <div className="flex justify-center items-center">
+                        <MdBusinessCenter className="text-[36px]" />
+                    </div>
+                    <p className="text-[20px] py-4 font-semibold">Experience</p>
                     <p>0+ year Web Development</p>
                     <p>1+ year NPI Engineer</p>
                 </div>
                 <div className="border border-[#7E99A3] rounded-lg p-4 text-center w-full mb-4 bg-[#FAFAFA]">
-                    <p className="text-[20px] mb-2 py-4 font-semibold">Education</p>
+                    <div className="flex justify-center items-center">
+                        <FaGraduationCap className="text-[36px]" />
+                    </div>
+                    <p className="text-[20px] py-4 font-semibold">Education</p>
                     <p>B.Sc Bachelors Degree of Industrial Engineering</p>
                     <p>Kasetsart University</p>
                 </div>
