@@ -23,9 +23,15 @@ export default function Home() {
             <h2 className="text-[22px]  text-[#4C585B] font-semibold">Web Developer</h2>
           </div>
           <div className="flex items-center justify-center gap-x-3">
-            <FaGithub className="text-[36px]" />
-            <FaLinkedin className="text-[36px]" />
-            <FaGoogle className="text-[36px]" />
+            <a href="https://github.com/NakornKitk">
+              <FaGithub className="text-[36px]" />
+            </a>
+            <a href="https://www.linkedin.com/in/nakorn-kitkancharoensin/">
+              <FaLinkedin className="text-[36px]" />
+            </a>
+            <a href="mailto:nakornkitk@gmail.com">
+              <FaGoogle className="text-[36px]" />
+            </a>
           </div>
         </div>
         <AboutMe />
