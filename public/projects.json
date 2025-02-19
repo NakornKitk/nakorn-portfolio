@@ -1,0 +1,40 @@
+{
+    "projects": [
+      {
+        "name": "Projects",
+        "image": "/images/project.png",
+        "frontend": "ReactJS MaterialUI",
+        "backend": "NodeJS ExpressJS",
+        "database": "MySQL",
+        "github": "https://github.com/NakornKitk/my-webboard-project",
+        "live": "https://my-webboard-project.onrender.com/"
+      },
+      {
+        "name": "Sumline Shop",
+        "image": "/images/sumline.png",
+        "frontend": "ReactJS TailwindCSS",
+        "backend": "-",
+        "database": "-",
+        "github": "https://github.com/NakornKitk/sumline-shop-v2",
+        "live": "https://nakornkitk.github.io/sumline-shop-v2/"
+      },
+      {
+        "name": "POPCAT Battle click",
+        "image": "/images/popcat.jpg",
+        "frontend": "ReactJS TailwindCSS",
+        "backend": "NodeJS ExpressJS",
+        "database": "MongoDB",
+        "github": "https://github.com/NakornKitk/popcat-battle-project",
+        "live": "https://popcat-clicks-battle-project.onrender.com/"
+      },
+      {
+        "name": "LinkedIn profile clone",
+        "image": "/images/linkedin.jpg",
+        "frontend": "only HTML and CSS",
+        "backend": "-",
+        "database": "-",
+        "github": "https://github.com/NakornKitk/linkedin-profile",
+        "live": "https://nakornkitk.github.io/linkedin-profile/"
+      }
+    ]
+  }
