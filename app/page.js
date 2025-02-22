@@ -30,31 +30,33 @@ function HomeContent() {
   return (
     <div className="bg-white text-black min-h-screen">
       <Header />
-      <div className="px-[15%] pt-[70px]">
-        <div className="text-center mt-[120px] mb-[100px]">
-          <div className="rounded-full object-cover mx-[auto] overflow-hidden w-[400px] h-[400px]">
+      <div className="px-[15%]">
+        <div className="pt-[70px] xl:pt-[0px] text-center my-[auto] xl:flex xl:items-center xl:justify-center min-h-[calc(100vh-90px)]">
+          <div className="rounded-full object-cover mx-[auto] xl:m-[0px] overflow-hidden w-[400px] h-[400px]">
             <Image src="/images/profile.png" alt="profile" width={400} height={400} />
           </div>
-          <div className="pt-[40px] pb-[10px]">
-            <h1 className="text-[32px] font-bold text-black">Nakorn Kitkanchaoroensin</h1>
-            <h2 className="text-[22px] text-[#4C585B] font-semibold">Web Developer</h2>
-          </div>
-          <div className="flex items-center justify-center gap-x-3">
-            <a href="https://github.com/NakornKitk">
-              <FaGithub className="text-[36px]" />
-            </a>
-            <a href="https://www.linkedin.com/in/nakorn-kitkancharoensin/">
-              <FaLinkedin className="text-[36px]" />
-            </a>
-            <a href="mailto:nakornkitk@gmail.com">
-              <FaGoogle className="text-[36px]" />
-            </a>
+          <div>
+            <div className="pt-[40px] pb-[10px] w-[400px] mx-[auto] xl:ml-[20px]">
+              <h1 className="text-[32px] font-bold text-black">Nakorn Kitkanchaoroensin</h1>
+              <h2 className="text-[22px] text-[#4C585B] font-semibold">Web Developer</h2>
+            </div>
+            <div className="flex items-center justify-center gap-x-3">
+              <a href="https://github.com/NakornKitk">
+                <FaGithub className="text-[36px]" />
+              </a>
+              <a href="https://www.linkedin.com/in/nakorn-kitkancharoensin/">
+                <FaLinkedin className="text-[36px]" />
+              </a>
+              <a href="mailto:nakornkitk@gmail.com">
+                <FaGoogle className="text-[36px]" />
+              </a>
+            </div>
           </div>
         </div>
         <div ref={section1Ref}></div>
         <AboutMe />
-        <Experience />
         <div ref={section2Ref}></div>
+        <Experience />
         <Skill />
         <div ref={section3Ref}></div>
         <Projects />

@@ -1,8 +1,17 @@
 {
     "projects": [
       {
-        "name": "Projects",
-        "image": "/images/project.png",
+        "name": "Rilon Thailand website",
+        "image": "/images/webrilon.png",
+        "frontend": "ReactJS TailwindCSS",
+        "backend": "NodeJS ExpressJS",
+        "database": "MySQL",
+        "github": "https://github.com/RilonWorachart/rilon-fullstack-website/",
+        "live": "https://rilonthailand.com"
+      },
+      {
+        "name": "My Webboard project",
+        "image": "/images/webboard.png",
         "frontend": "ReactJS MaterialUI",
         "backend": "NodeJS ExpressJS",
         "database": "MySQL",

@@ -14,8 +14,8 @@ function Skill() {
   return (
     <div className="my-[50px]">
       <h1 className="text-center text-[32px] font-bold">Skill</h1>
-      <div className="flex gap-x-[20px] my-[20px]">
-        <div className="border border-[#7E99A3] bg-[#FAFAFA] rounded-lg p-4 text-center w-full pb-6">
+      <div className="md:flex gap-x-[20px] my-[20px]">
+        <div className="border border-[#7E99A3] bg-[#FAFAFA] rounded-lg p-4 text-center w-full pb-6 mb-[20px] md:mb-[0px]">
           <h2 className="text-[20px] mb-2 py-4 font-semibold text-[#4C585B]">Frontend Development</h2>
           <div className="flex items-center justify-center py-2">
             <div className="pr-[10px] text-[30px]">
