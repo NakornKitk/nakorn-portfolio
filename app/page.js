@@ -6,6 +6,7 @@ import Skill from "./components/Skill";
 import Projects from "./components/Projects";
 import Image from 'next/image';
 import Experience from "./components/Experience";
+import BackToTopButton from "./components/BackToTopButton";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
@@ -30,6 +31,7 @@ function HomeContent() {
   return (
     <div className="bg-white text-black min-h-screen">
       <Header />
+      <BackToTopButton />
       <div className="px-[15%]">
         <div className="pt-[70px] xl:pt-[0px] text-center my-[auto] xl:flex xl:items-center xl:justify-center min-h-[calc(100vh-90px)]">
           <div className="rounded-full object-cover mx-[auto] xl:m-[0px] overflow-hidden w-[400px] h-[400px]">
