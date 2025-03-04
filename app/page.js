@@ -29,16 +29,16 @@ function HomeContent() {
   }, [setSectionRefs]);
 
   return (
-    <div className="bg-white text-black min-h-screen">
+    <div className="bg-white text-black min-h-screen overflow-hidden">
       <Header />
       <BackToTopButton />
       <div className="px-[15%]">
         <div className="pt-[70px] xl:pt-[0px] text-center my-[auto] xl:flex xl:items-center xl:justify-center min-h-[calc(100vh-90px)]">
-          <div className="rounded-full object-cover mx-[auto] xl:m-[0px] overflow-hidden w-[400px] h-[400px]">
+          <div className="rounded-full object-cover mx-auto mb-[20px] xl:m-0 overflow-hidden w-full max-w-[400px] h-full aspect-square">
             <Image src="/images/profile.png" alt="profile" width={400} height={400} />
           </div>
           <div>
-            <div className="pt-[40px] pb-[10px] w-[400px] mx-[auto] xl:ml-[20px]">
+            <div className="pt-[40px] pb-[10px] max-w-[400px] mx-[auto] xl:ml-[20px]">
               <h1 className="text-[32px] font-bold text-black">Nakorn Kitkanchaoroensin</h1>
               <h2 className="text-[22px] text-[#4C585B] font-semibold">Web Developer</h2>
             </div>

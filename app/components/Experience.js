@@ -1,12 +1,66 @@
-import React from 'react'
+'use client'
 import Image from 'next/image'
+import { useEffect, useState, useRef } from 'react'
 
 function Experience() {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [inView, setInView] = useState(false); // To track if the div is in the viewport
+  const divRef = useRef(null); // Reference to the div
+  const isFlexColumn = window.innerWidth < 768;
+
+  useEffect(() => {
+    // Store the ref value in a variable before observing it
+    const currentDivRef = divRef.current;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setInView(true); // Set inView to true when the component is in the viewport
+          } else {
+            setInView(false); // Optional: reset state when leaving the viewport
+          }
+        });
+      },
+      { threshold: 0.2 } // Trigger when 50% of the element is visible
+    );
+
+    if (currentDivRef) {
+      observer.observe(currentDivRef); // Observe the target div
+    }
+
+    return () => {
+      // Use the variable to ensure it's accessed correctly during cleanup
+      if (currentDivRef) {
+        observer.unobserve(currentDivRef); // Clean up observer on unmount
+      }
+    };
+  }, []); // Empty dependency array to set up observer once
+
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY); // Update the scroll position
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll); // Clean up event listener on unmount
+    };
+  }, []);
+
+
+  const scrollEffect = inView ? Math.min(scrollPosition / 5, 100) : 0;
   return (
-    <div className="my-[50px]">
+    <div className={`my-[50px] ${isFlexColumn ? 'overflow-hidden' : ''}`} ref={divRef} >
       <h1 className="text-center text-[32px] font-bold">Experience</h1>
       <div className="md:flex gap-[20px] my-[20px]">
-        <div className="border border-[#7E99A3] bg-[#FAFAFA] rounded-lg px-4 py-[50px] text-center w-full mb-[20px] md:mb-[0px]">
+        <div className="border border-[#7E99A3] bg-[#FAFAFA] rounded-lg px-4 py-[50px] text-center w-full mb-[20px] md:mb-[0px] transition-transform duration-500 ease-in-out"
+          style={{
+            transform: `${isFlexColumn ? `translateY(${100 - scrollEffect}%)` : `translateX(-${100 - scrollEffect}%)`}`
+          }}>
           <div className="h-[50px]">
             <h2 className="text-[20px] my-[auto] font-semibold">Worachart Group Company Limited</h2>
           </div>
@@ -19,7 +73,9 @@ function Experience() {
           </div>
           <p className="py-4">Developing a full-stack web application for a company utilizing React.js for the frontend, Node.js for the backend, and MySQL as the database solution.</p>
         </div>
-        <div className="border border-[#7E99A3] bg-[#FAFAFA] rounded-lg px-4 py-[50px] text-center w-full">
+        <div className="border border-[#7E99A3] bg-[#FAFAFA] rounded-lg px-4 py-[50px] text-center w-full transition-transform duration-500 ease-in-out" style={{
+          transform: `${isFlexColumn ? `translateY(${100 - scrollEffect}%)` : `translateX(${100 - scrollEffect}%)`}`
+        }}>
           <div className="h-[50px]">
             <h2 className="text-[20px] my-[auto] font-semibold">SVI Public Company Limited</h2>
           </div>
