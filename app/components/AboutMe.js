@@ -1,6 +1,4 @@
-'use client'
 import { useEffect, useState, useRef } from 'react'
-
 import { FaGraduationCap } from "react-icons/fa";
 import { MdBusinessCenter } from "react-icons/md";
 
@@ -58,7 +56,7 @@ function AboutMe() {
 
     return (
         <div ref={divRef} className={`my-[50px] ${isFlexColumn ? 'overflow-hidden' : ''}`}>
-            <h1 className="text-center text-[32px] font-bold">About Me</h1>
+            <h1 className="text-center text-[26px] md:text-[32px] font-bold">About Me</h1>
 
             <div className="md:flex gap-[20px] my-[20px] w-[100%]">
                 <div className="border border-[#7E99A3] rounded-lg p-4 text-center w-full mb-4 bg-[#FAFAFA] transition-transform duration-500 ease-in-out"

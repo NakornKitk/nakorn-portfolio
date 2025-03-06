@@ -1,4 +1,3 @@
-"use client";
 import React, { useState, useEffect } from 'react'
 import ProjectCard from './ProjectCard';
 
@@ -15,7 +14,7 @@ function Projects() {
 
     return (
         <div className="my-[50px]">
-            <h1 className="text-center text-[32px] font-bold">Projects</h1>
+            <h1 className="text-center text-[26px] md:text-[32px] font-bold">Projects</h1>
             <div className="my-[20px] gap-y-[20px]">
                 {data.length > 0 ? (
                     data.map((item, index) => (

@@ -1,5 +1,3 @@
-'use client';
-
 import { useState } from 'react';
 import emailjs from 'emailjs-com';
 
@@ -43,7 +41,7 @@ export default function ContactForm() {
 
     return (
         <div className="py-16 bg-[#F4EDD3] px-6 md:px-[20%]">
-            <h2 className="text-center text-3xl md:text-4xl font-bold">Contact Me</h2>
+            <h2 className="text-center text-[26px] md:text-[32px] font-bold">Contact Me</h2>
             {status && <p className="text-center text-green-600">{status}</p>}
             <form onSubmit={handleSubmit} className="py-6 w-full mx-auto max-w-[600px] space-y-6">
                 <div className="flex flex-col">

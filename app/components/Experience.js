@@ -1,4 +1,3 @@
-'use client'
 import Image from 'next/image'
 import { useEffect, useState, useRef } from 'react'
 
@@ -55,7 +54,7 @@ function Experience() {
   const scrollEffect = inView ? Math.min(scrollPosition / 5, 100) : 0;
   return (
     <div className={`my-[50px] ${isFlexColumn ? 'overflow-hidden' : ''}`} ref={divRef} >
-      <h1 className="text-center text-[32px] font-bold">Experience</h1>
+      <h1 className="text-center text-[26px] md:text-[32px] font-bold">Experience</h1>
       <div className="md:flex gap-[20px] my-[20px]">
         <div className="border border-[#7E99A3] bg-[#FAFAFA] rounded-lg px-4 py-[50px] text-center w-full mb-[20px] md:mb-[0px] transition-transform duration-500 ease-in-out"
           style={{

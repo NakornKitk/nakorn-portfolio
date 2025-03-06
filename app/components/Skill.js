@@ -1,4 +1,3 @@
-'use client'
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
@@ -64,7 +63,7 @@ function Skill() {
   const scrollEffect = inView ? Math.min(scrollPosition / 5, 100) : 0;
   return (
     <div className={`my-[50px] ${isFlexColumn ? 'overflow-hidden' : ''}`} ref={divRef} >
-      <h1 className="text-center text-[32px] font-bold">Skill</h1>
+      <h1 className="text-center text-[26px] md:text-[32px] font-bold">Skill</h1>
       <div className="md:flex gap-x-[20px] my-[20px]">
         <div className="border border-[#7E99A3] bg-[#FAFAFA] rounded-lg p-4 text-center w-full pb-6 mb-[20px] md:mb-[0px] transition-transform duration-500 ease-in-out" style={{
           transform: `${isFlexColumn ? `translateY(${100 - scrollEffect}%)` : `translateX(-${100 - scrollEffect}%)`}`

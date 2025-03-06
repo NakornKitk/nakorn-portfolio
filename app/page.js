@@ -39,17 +39,17 @@ function HomeContent() {
           </div>
           <div>
             <div className="pt-[40px] pb-[10px] max-w-[400px] mx-[auto] xl:ml-[20px]">
-              <h1 className="text-[32px] font-bold text-black">Nakorn Kitkanchaoroensin</h1>
-              <h2 className="text-[22px] text-[#4C585B] font-semibold">Web Developer</h2>
+              <h1 className="text-[26px] md:text-[32px] font-bold text-black">Nakorn Kitkanchaoroensin</h1>
+              <h2 className="text-[20px] md:text-[22px] text-[#4C585B] font-semibold">Web Developer</h2>
             </div>
             <div className="flex items-center justify-center gap-x-3">
-              <a href="https://github.com/NakornKitk">
+              <a href="https://github.com/NakornKitk" className="hover:scale-110 transition-transform duration-300 ease-in-out">
                 <FaGithub className="text-[36px]" />
               </a>
-              <a href="https://www.linkedin.com/in/nakorn-kitkancharoensin/">
+              <a href="https://www.linkedin.com/in/nakorn-kitkancharoensin/" className="hover:scale-110 transition-transform duration-300 ease-in-out">
                 <FaLinkedin className="text-[36px]" />
               </a>
-              <a href="mailto:nakornkitk@gmail.com">
+              <a href="mailto:nakornkitk@gmail.com" className="hover:scale-110 transition-transform duration-300 ease-in-out">
                 <FaGoogle className="text-[36px]" />
               </a>
             </div>

@@ -1,5 +1,3 @@
-
-"use client";
 import React, { useState, useEffect } from 'react';
 import Sidebar from './Sidebar.js';
 import { useScroll } from './ScrollContext.js';
@@ -29,17 +27,14 @@ function Header() {
   }, []);
 
 
-
-
-
   return (
     <div className="text-white bg-[#7E99A3] w-full top-0 left-0 z-50">
       <div className="flex justify-between py-[20px] px-[15%]">
-        <p className="text-[30px]">Nakorn Portfolio</p>
+        <p className="text-[24px] font-bold">Nakorn Portfolio</p>
         <div className="flex items-center justify-center text-[30px] md:hidden cursor-pointer">
           <MdOutlineMenu onClick={() => setIsActiveSidebar(true)} />
         </div>
-        <div className="hidden md:flex gap-x-[10px] items-center justify-center text-[18px]">
+        <div className="hidden md:flex gap-x-[20px] items-center justify-center text-[18px]">
           <p onClick={() => navigateAndScroll(0)} className="cursor-pointer">About</p>
           <p onClick={() => navigateAndScroll(1)} className="cursor-pointer">Experience</p>
           <p onClick={() => navigateAndScroll(2)} className="cursor-pointer">Projects</p>
