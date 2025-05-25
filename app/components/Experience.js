@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import { useEffect, useState, useRef } from 'react'
 
@@ -56,15 +58,15 @@ function Experience() {
     <div className={`my-[50px] ${isFlexColumn ? 'overflow-hidden' : ''}`} ref={divRef} >
       <h1 className="text-center text-[26px] md:text-[32px] font-bold">Experience</h1>
       <div className="md:flex gap-[20px] my-[20px]">
-        <div className="border border-[#7E99A3] bg-[#FAFAFA] rounded-lg px-4 py-[50px] text-center w-full mb-[20px] md:mb-[0px] transition-transform duration-500 ease-in-out"
+        <div className={`border border-[#7E99A3] bg-[#FAFAFA] rounded-lg px-4 py-[50px] text-center w-full mb-[20px] md:mb-[0px] transition-transform duration-500 ease-in-out ${inView ? 'fade-in' : 'opacity-0'}`}
           style={{
             transform: `${isFlexColumn ? `translateY(${100 - scrollEffect}%)` : `translateX(-${100 - scrollEffect}%)`}`
           }}>
           <div className="h-[50px]">
-            <h2 className="text-[20px] my-[auto] font-semibold">Worachart Group Company Limited</h2>
+            <h2 className="text-[20px] my-[auto] font-semibold">Rilon Thailand Company Limited</h2>
           </div>
           <div className="w-[100%] h-[200px] flex items-center justify-center">
-            <Image src="/images/logo-w.png" alt="worachart" width={200} height={200} className="rounded-lg object-cover mx-[auto]" />
+            <Image src="/images/rilonthailand.jpg" alt="rilon_thailand_logo" width={200} height={200} className="rounded-lg object-cover mx-[auto]" />
           </div>
           <div className="py-1 text-[18px]">
             <p className="font-semibold">Web developer</p>
@@ -72,7 +74,7 @@ function Experience() {
           </div>
           <p className="py-4">Developing a full-stack web application for a company utilizing React.js for the frontend, Node.js for the backend, and MySQL as the database solution.</p>
         </div>
-        <div className="border border-[#7E99A3] bg-[#FAFAFA] rounded-lg px-4 py-[50px] text-center w-full transition-transform duration-500 ease-in-out" style={{
+        <div className={`border border-[#7E99A3] bg-[#FAFAFA] rounded-lg px-4 py-[50px] text-center w-full transition-transform duration-500 ease-in-out ${inView ? 'fade-in' : 'opacity-0'}`} style={{
           transform: `${isFlexColumn ? `translateY(${100 - scrollEffect}%)` : `translateX(${100 - scrollEffect}%)`}`
         }}>
           <div className="h-[50px]">

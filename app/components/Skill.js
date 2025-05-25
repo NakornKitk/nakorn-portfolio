@@ -1,3 +1,5 @@
+'use client'
+
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
@@ -65,7 +67,7 @@ function Skill() {
     <div className={`my-[50px] ${isFlexColumn ? 'overflow-hidden' : ''}`} ref={divRef} >
       <h1 className="text-center text-[26px] md:text-[32px] font-bold">Skill</h1>
       <div className="md:flex gap-x-[20px] my-[20px]">
-        <div className="border border-[#7E99A3] bg-[#FAFAFA] rounded-lg p-4 text-center w-full pb-6 mb-[20px] md:mb-[0px] transition-transform duration-500 ease-in-out" style={{
+        <div className={`border border-[#7E99A3] bg-[#FAFAFA] rounded-lg p-4 text-center w-full pb-6 mb-[20px] md:mb-[0px] transition-transform duration-500 ease-in-out ${inView ? 'fade-in' : 'opacity-0'}`} style={{
           transform: `${isFlexColumn ? `translateY(${100 - scrollEffect}%)` : `translateX(-${100 - scrollEffect}%)`}`
         }}>
           <h2 className="text-[20px] mb-2 py-4 font-semibold text-[#4C585B]">Frontend Development</h2>
@@ -124,7 +126,7 @@ function Skill() {
             </div>
           </div>
         </div>
-        <div className="border border-[#7E99A3] bg-[#FAFAFA] rounded-lg p-4 text-center w-full pb-6 transition-transform duration-500 ease-in-out" style={{
+        <div className={`border border-[#7E99A3] bg-[#FAFAFA] rounded-lg p-4 text-center w-full pb-6 transition-transform duration-500 ease-in-out ${inView ? 'fade-in' : 'opacity-0'}`}  style={{
           transform: `${isFlexColumn ? `translateY(${100 - scrollEffect}%)` : `translateX(${100 - scrollEffect}%)`}`
         }}>
           <h2 className="text-[20px] mb-2 py-4 font-semibold text-[#4C585B]">Backend Development</h2>

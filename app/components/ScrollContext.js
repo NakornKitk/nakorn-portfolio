@@ -1,35 +1,39 @@
+'use client';
 
 import React, { createContext, useState, useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 
-const ScrollContext = createContext();
+const ScrollContext = createContext(null);
 
 export const useScroll = () => {
-  return useContext(ScrollContext);
+  const context = useContext(ScrollContext);
+  if (!context) {
+    throw new Error('useScroll must be used within a ScrollProvider');
+  }
+  return context;
 };
 
 export const ScrollProvider = ({ children }) => {
   const [sectionRefs, setSectionRefs] = useState([]);
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const scrollToSection = (index) => {
-    if (sectionRefs[index]) {
-      sectionRefs[index].scrollIntoView({
+    const ref = sectionRefs[index];
+    if (ref && ref.scrollIntoView) {
+      ref.scrollIntoView({
         behavior: 'smooth',
         block: 'start',
       });
     }
   };
 
-
   const navigateAndScroll = (index) => {
-    // Navigate to the Home page first
-    navigate('/');
-    
-    // After navigation, scroll to the specific section
+    router.push('/'); // Navigate to the homepage
+
+    // Scroll after a short delay
     setTimeout(() => {
       scrollToSection(index);
-    }, 500);  // Wait for the page to load before scrolling (adjust time as needed)
+    }, 300);
   };
 
   return (

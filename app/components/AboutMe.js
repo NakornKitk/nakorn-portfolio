@@ -1,3 +1,5 @@
+'use client'
+
 import { useEffect, useState, useRef } from 'react'
 import { FaGraduationCap } from "react-icons/fa";
 import { MdBusinessCenter } from "react-icons/md";
@@ -59,7 +61,7 @@ function AboutMe() {
             <h1 className="text-center text-[26px] md:text-[32px] font-bold">About Me</h1>
 
             <div className="md:flex gap-[20px] my-[20px] w-[100%]">
-                <div className="border border-[#7E99A3] rounded-lg p-4 text-center w-full mb-4 bg-[#FAFAFA] transition-transform duration-500 ease-in-out"
+                <div className={`border border-[#7E99A3] rounded-lg p-4 text-center w-full mb-4 bg-[#FAFAFA] transition-transform duration-500 ease-in-out ${inView ? 'fade-in' : 'opacity-0'}`}
                     style={{
                         transform: `${isFlexColumn ? `translateY(${100 - scrollEffect}%)` : `translateX(-${100 - scrollEffect}%)`}`
                     }}>
@@ -70,7 +72,7 @@ function AboutMe() {
                     <p>0+ year Web Development</p>
                     <p>1+ year NPI Engineer</p>
                 </div>
-                <div className="border border-[#7E99A3] rounded-lg p-4 text-center w-full mb-4 bg-[#FAFAFA] transition-transform duration-500 ease-in-out"
+                <div className={`border border-[#7E99A3] rounded-lg p-4 text-center w-full mb-4 bg-[#FAFAFA] transition-transform duration-500 ease-in-out ${inView ? 'fade-in' : 'opacity-0'}`}
                     style={{
                         transform: `${isFlexColumn ? `translateY(${100 - scrollEffect}%)` : `translateX(${100 - scrollEffect}%)`}`
                     }}>
